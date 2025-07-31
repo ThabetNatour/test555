@@ -29,13 +29,15 @@ header {
   text-align: center;
 }
 
+
+
 main {
   flex: 1;
   padding: 20px;
 }
 
 footer {
-  background-color: #222;
+  background-color: #0f0981;
   color: white;
   text-align: center;
   padding: 10px;
@@ -46,7 +48,7 @@ footer {
 
 /*#region Container and layout */
 .container {
-  max-width: 65%;
+  width: 65%;
   margin: 0 auto;
   background-color: white;
   border-radius: 12px;
@@ -71,6 +73,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: 10px;
   gap: 10px;
 }
 
@@ -123,10 +126,6 @@ h2 {
   padding: 18px 14px;
   border-bottom: 1px solid #eee;
   transition: background-color 0.2s ease;
-}
-
-.contacts li:hover {
-  background-color: #f9f9f9;
 }
 
 .contact-info {
@@ -327,3 +326,170 @@ h2 {
 }
 
 /*#endregion Contact Form*/
+
+/*#region Dark Mode button and theme*/
+
+.top-theme-toggle {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-theme-toggle:hover {
+  background-color: gray;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode main {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode footer {
+  background-color: #111;
+  color: #aaa;
+}
+
+body.dark-mode .container,
+body.dark-mode h2,
+body.dark-mode .contacts li {
+  background-color: #2a2a2a;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-mode .contact-buttons button {
+  color: #ccc;
+}
+
+body.dark-mode .contact-buttons button:hover {
+  color: #0af;
+}
+
+body.dark-mode .popup-content {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+body.dark-mode input,
+body.dark-mode input:focus {
+  background-color: #333;
+  color: #f1f1f1;
+  border-color: #555;
+}
+
+body.dark-mode #saveContactBtn {
+  background-color: #3cb371;
+}
+
+body.dark-mode #saveContactBtn:hover {
+  background-color: #2e8b57;
+}
+
+body.dark-mode #cancelContactBtn {
+  background-color: #b22222;
+}
+
+body.dark-mode #cancelContactBtn:hover {
+  background-color: #8b0000;
+}
+
+body.dark-mode .popup-content {
+  color: white;
+}
+
+body.dark-mode #addContactForm label,
+body.dark-mode #infoPopup span,
+body.dark-mode #infoPopup strong {
+  color: #eee !important;
+
+}
+
+/*#endregion Dark Mode button and theme*/
+
+/*#region Media Style*/
+
+@media only screen and (max-width: 768px) {
+
+  .container {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .top-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .container {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .top-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+/*#endregion Media Style*/
